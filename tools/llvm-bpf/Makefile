@@ -38,7 +38,8 @@ CMAKE_HOST_OPTIONS += \
 	-DLLVM_INSTALL_TOOLCHAIN_ONLY=ON \
 	-DLLVM_LINK_LLVM_DYLIB=ON \
 	-DLLVM_TOOLCHAIN_TOOLS="llvm-objcopy;llvm-objdump;llvm-readelf;llvm-strip;llvm-ar;llvm-as;llvm-dis;llvm-link;llvm-nm;llvm-ranlib;llc;opt" \
-	-DCMAKE_SKIP_RPATH=OFF
+	-DCMAKE_SKIP_RPATH=OFF \
+	-DCMAKE_POSITION_INDEPENDENT_CODE=ON
 
 define Host/Install
 	rm -rf $(STAGING_DIR_HOST)/llvm-bpf*
